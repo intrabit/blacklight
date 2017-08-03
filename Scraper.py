@@ -1,5 +1,4 @@
 # Scrapes the HTML for information.
-# Louis 15/07/2017 13:32
 
 import recipebot.Settings as settings
 
