@@ -1,13 +1,18 @@
-# This file defines all settings for Blacklight.
+# Settings file.
 
-LINK_BUFFER_SIZE = 200  # The buffer that holds the links to be crawled.
-MAX_THREADS = 4
-FAILED_THREAD_ABORT = 2  # The number of threads that have to fail before the program aborts.
-VERSION = "0.1.0"
-CONNECTION_TIMEOUT = 2
-RESPONSE_BUFFER_SIZE = 4096  # The size of the buffer that holds the server response.
+BASE_SERVER = "www.jamieoliver.com"
+MAIN_BRANCH = BASE_SERVER + "/recipes/"
+BASE_FILENAME = "recipes/recipe_"
+SAVE_FILE_NAME = "autosave.bsf"
+FILE_EXTENSION = ".rcp"
+SOCKET_TIMEOUT = 5
+ENCRYPTED = True
 DEFAULT_ENCODING = "utf-8"
-SCRAPE_FILE_PATH = "Ingredients.scr"  # The name of the scrape file used to determine what data to scrape from the HTML.
+MAX_RETRIES = 3
+RESPONSE_BUFFER_SIZE = 1049
+VERSION = "0.01"
+AUTO_SAVE_INTERVAL = 5
 
-#  TODO: In later versions use a byte array to store incoming data. Will be faster.
-#  TODO: Finish scraper.
+# Auto Save:
+# Every X links, the program saves the state of the stacks and the recipeno to a save file
+# so if there's a crash the program can be loaded from a previous position.
